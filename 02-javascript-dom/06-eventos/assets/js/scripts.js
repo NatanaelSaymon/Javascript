@@ -1,62 +1,90 @@
-// //CLASSLIST
+//EVENTOS
 
-// const menu = document.querySelector(".menu");
-// console.log(menu.classList);
+//É boa prática separar a função de callback do addEventListener, ou seja, declarar uma função ao invés de passar diretamente uma função anônima
 
-// //CONTAINS = true ou false
-// if (menu.classList.contains("inativo")) {
-//   console.log("Tem a class inativo no menu");
-// } else {
-//   console.log("Não tem class inativo no menu");
+const img = document.querySelector('img')
+
+function callback() {
+  console.log('Clicou')
+}
+
+// img.addEventListener("click", callback)
+
+//Event
+const animaisLista = document.querySelector('.animais-lista')
+
+function listaAnimal(event) {
+  console.log(event)
+
+  //Propriedades dos eventos
+  console.log(event.currentTarget) //Mostra o elemento que está sendo clicado
+  console.log(event.target) //Onde o click ocorreu
+  console.log(event.type) //tipo de evento
+  console.log(event.path) //caminho
+}
+
+// animaisLista.addEventListener("click", listaAnimal)
+
+//Diferentes eventos
+
+// const h1 = document.querySelector('h1')
+
+// function callbackEventos(event) {
+//   console.log('Voce apertou a letra: ', event.key)
 // }
 
-// //ATTRIBUTE: retorna um array-like com os atributos do elemento
-// const animais = document.querySelector(".animais");
-// console.log(animais.attributes); //retorna todos os atributos
-// console.log(animais.attributes[1]); //retorna o 2 atributos
+// h1.addEventListener('click', callbackEventos)
+// h1.addEventListener('mouseenter', callbackEventos)
+// h1.addEventListener('mousemove', callbackEventos)
 
-// //GETATRIBUTE / SETATRIBUTE
-// const animaisImagem = document.querySelectorAll("img");
+// window.addEventListener('scroll', callbackEventos)
+// window.addEventListener('resize', callbackEventos)
+// window.addEventListener('keydown', callbackEventos)
 
-// // animaisImagem.forEach((item) => {
-// //   console.log(item.getAttribute("alt")); //retorna todos os atributos alts das imagens.
-// // });
-
-// animaisImagem.forEach((item) => {
-//   if (item.hasAttribute("alt") == false) {
-//     //Verifica se cada imagem contem o atributo alt, caso n tenha, vai ser adicionado o alt com um texto
-//     item.setAttribute("alt", "Texto alternativo");
-//   }
-//   console.log(item.getAttribute("alt"));
-// });
+// window.addEventListener('keydown', callbackEventos)
 
 
+// EXERCICIO
 
+// Quando o usuário clicar nos links internos do site, adicione a classe ativo ao item clicado e remova dos
+// demais itens caso eles possuam a mesma. Previna o comportamento padrão desses links.
+const linksInternos = document.querySelectorAll('a[href^="#"]')
 
-//EXERCICIO
+function addAtivo(event) {
+  event.preventDefault();
 
-// Adicione a classe ativo a todos os itens do menu
-const menuItems = document.querySelectorAll('.menu ul li a')
-menuItems.forEach((item) => {
-  item.classList.add('ativo')
+  linksInternos.forEach((link) => {
+    link.classList.remove('ativo')
+  })
+  this.classList.add('ativo')
+
+}
+linksInternos.forEach((link) => {
+  link.addEventListener('click', addAtivo)
 })
 
-// Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
-menuItems.forEach((item) => {
-  item.classList.remove('ativo')
-})
-menuItems[0].classList.add('ativo')
 
+// Selecione todos os elementos do site começando a partir do body,
+// ao clique mostre exatamente quais elementos estão sendo clicados.
+const allElements = document.querySelectorAll('body *')
 
-// Verifique se as imagens possuem o atributo alt
-const allImage = document.querySelectorAll('img')
+function showElement(event) {
+  event.currentTarget.remove()
+}
 
-allImage.forEach((imgItem) => {
-  const possuiAtributo = imgItem.hasAttribute('alt')
-  console.log(possuiAtributo)
+allElements.forEach((item) => {
+  item.addEventListener('click', showElement)
 })
 
-// Modifique o href do link externo no menu
-const linkExterno = document.querySelector('a[href^="http"]')
 
-linkExterno.setAttribute('href', '#')
+// Utilizando o código anterior, ao invés de mostrar no console,
+// remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+
+// Se o usuário clicar na tecla (t), aumente todo o texto do site. 
+function clickT(event) {
+  if (event.key === 't' || event.key === 'T') {
+    document.documentElement.classList.toggle('texto-maior')
+  }
+}
+window.addEventListener('keydown', clickT)

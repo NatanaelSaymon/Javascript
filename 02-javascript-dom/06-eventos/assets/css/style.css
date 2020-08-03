@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html.texto-maior {
+  font-size: 150%;
+}
+
 body {
   background: #FAF6ED;
   color: #333;
