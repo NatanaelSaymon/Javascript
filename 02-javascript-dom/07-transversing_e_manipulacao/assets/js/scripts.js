@@ -1,12 +1,12 @@
 //TRANSVERSING E MANIPULAÇÃO
 
-const h1 = document.querySelector("h1");
+// const h1 = document.querySelector("h1");
 
 // h1.innerText = "Novo titulo"
 // console.log(h1.outerHTML)
 // console.log(h1.innerHTML)
 
-const lista = document.querySelector(".animais-lista");
+// const lista = document.querySelector(".animais-lista");
 
 // console.log(lista.parentElement) // pai
 // console.log(lista.parentElement.parentElement) // pai do pai
@@ -17,8 +17,8 @@ const lista = document.querySelector(".animais-lista");
 // console.log(lista.children[0]) //primeiro filho
 // console.log(lista.children[--lista.children.length]) //retorna o ultimo filho
 
-const ul = lista.querySelectorAll("li"); // todas as LI's
-const last_ul = lista.querySelector("li:last-child");
+// const ul = lista.querySelectorAll("li"); // todas as LI's
+// const last_ul = lista.querySelector("li:last-child");
 
 // ul.forEach((item) => {
 //   console.log(item)
@@ -26,15 +26,15 @@ const last_ul = lista.querySelector("li:last-child");
 
 // console.log('Ultimo filho: ', last_ul)
 
-const contato = document.querySelector(".contato"); //pegando a todos os elementos que estão dentro de .contato
+// const contato = document.querySelector(".contato"); //pegando a todos os elementos que estão dentro de .contato
 
-const titulo = document.querySelector(".title"); //Pegando o primeiro titulo da pagina
+// const titulo = document.querySelector(".title"); //Pegando o primeiro titulo da pagina
 
-const tituloContato = contato.querySelector(".title"); //Estamos pegando o primeiro titulo da class "CONTATO"
+// const tituloContato = contato.querySelector(".title"); //Estamos pegando o primeiro titulo da class "CONTATO"
 
-const mapa = document.querySelector(".mapa");
+// const mapa = document.querySelector(".mapa");
 
-const faq = document.querySelector(".faq");
+// const faq = document.querySelector(".faq");
 
 // contato.appendChild(lista); //Move o elemento "lista" para o final de "contato"
 
@@ -51,6 +51,39 @@ const faq = document.querySelector(".faq");
 
 // mapa.appendChild(newh1); //Adicionando o novo elemento na pagina
 
-const cloneTitulo = titulo.cloneNode(true);
+// const cloneTitulo = titulo.cloneNode(true);
 
-faq.appendChild(cloneTitulo);
+// faq.appendChild(cloneTitulo);
+
+
+
+
+
+//EXERCICIO
+
+// Duplique o menu e adicione ele em copy
+
+const menu = document.querySelector('.menu')
+const footer = document.querySelector('.copy')
+
+const cloneMenu = menu.cloneNode(true)
+footer.appendChild(cloneMenu)
+
+// Selecione o primeiro DT da dl de Faq
+// const firstDt = document.querySelector('.faq-lista')
+// console.log(firstDt.children[0])
+
+
+// Selecione o DD referente ao primeiro DT
+const firstDd = document.querySelector('dt')
+console.log(firstDd.nextElementSibling)
+
+
+// Substitua o conteúdo html de .faq pelo de .animais
+const conteudoAnimais = document.querySelector('.animais')
+const cloneConteudoAnimais = conteudoAnimais.cloneNode(true)
+const faq = document.querySelector('.faq')
+const conteudoFaq = document.querySelector('.faq-lista')
+
+faq.removeChild(conteudoFaq)
+faq.appendChild(cloneConteudoAnimais)
