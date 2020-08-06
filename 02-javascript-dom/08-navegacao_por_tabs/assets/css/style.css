@@ -108,6 +108,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista img {
+  cursor: pointer;
+}
+
 /*Estilizando a barra de scroll*/
 .animais-lista::-webkit-scrollbar {
   width: 18px;
@@ -232,5 +236,28 @@ body {
 
   .copy {
     margin-bottom: 0;
+  }
+}
+
+/* NAVEGAÇÃO POR TAB */
+
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.active {
+  display: block;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0)
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
   }
 }
