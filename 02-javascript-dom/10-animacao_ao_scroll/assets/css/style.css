@@ -294,3 +294,16 @@ body {
     max-height: 100px;
   }
 }
+
+/* SCROLL ANIMATION */
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: .3s;
+}
+
+.js .js-scroll.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
