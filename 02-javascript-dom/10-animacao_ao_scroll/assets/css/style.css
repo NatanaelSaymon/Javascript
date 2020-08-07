@@ -135,7 +135,7 @@ body {
   margin-bottom: 3rem;
 }
 
-/*FAQ*/
+/* FAQ */
 .faq-lista {
   grid-column: 2 / 4;
 }
@@ -200,45 +200,6 @@ body {
   font-size: 1.3rem;
 }
 
-/*Responsivo*/
-@media(max-width: 700px) {
-  body {
-    grid-template-columns: 1fr;
-  }
-
-  .menu,
-  .grid-section,
-  .copy {
-    grid-column: 1;
-  }
-
-  .grid-section {
-    grid-template-columns: 100px 1fr;
-    grid-gap: 10px;
-  }
-
-  .animais-lista {
-    grid-column: 1;
-  }
-
-  .faq-lista,
-  .dados,
-  .mapa {
-    grid-column: 1 / 3;
-  }
-
-  .grid-section h1 {
-    font-size: 3rem;
-  }
-
-  .menu {
-    margin-top: 0;
-  }
-
-  .copy {
-    margin-bottom: 0;
-  }
-}
 
 /* NAVEGAÇÃO POR TAB */
 
@@ -306,4 +267,45 @@ body {
 .js .js-scroll.active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+
+/*Responsivo*/
+@media(max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .menu,
+  .grid-section,
+  .copy {
+    grid-column: 1;
+  }
+
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+
+  .animais-lista {
+    grid-column: 1;
+  }
+
+  .faq-lista,
+  .dados,
+  .mapa {
+    grid-column: 1 / 3;
+  }
+
+  .grid-section h1 {
+    font-size: 3rem;
+  }
+
+  .menu {
+    margin-top: 0;
+  }
+
+  .copy {
+    margin-bottom: 0;
+  }
 }
