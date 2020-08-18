@@ -47,10 +47,7 @@ let html = `<section>
             </section>`
 // Substitua section por ul e div com li,
 // utilizando split e join
-html = html.split('section')
-html = html.join('ul')
-html = html.split('div')
-html = html.join('li')
+html = html.split('section').join('ul').split('div').join('li')
 
 console.log(html)
 
