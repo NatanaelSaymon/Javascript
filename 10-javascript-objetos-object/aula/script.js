@@ -41,7 +41,7 @@ console.log(moto)
 
 
 //GET E SET
-//É possivel definirmos diferentes comportamentos para get e set de uma propriedade. LEMBRANDO que ao acionarmos uma propriedade obj.propriedade, a função get é ativada e ao setarmos obj.propriedade = 'valor' a função de set é ativada.
+//É possivel definirmos diferentes comportamentos para GET e SET de uma propriedade. LEMBRANDO que ao acionarmos uma propriedade obj.propriedade, a função get é ativada e ao setarmos obj.propriedade = 'valor' a função de SET é ativada.
 
 const carro = {}
 Object.defineProperties(carro, {
