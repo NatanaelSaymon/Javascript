@@ -1,6 +1,6 @@
 export default function initTabNav() {
-  const tabMenu = document.querySelectorAll('.js-tabmenu li')
-  const tabContent = document.querySelectorAll('.js-tabcontent section')
+  const tabMenu = document.querySelectorAll('[data-anima="menu"] li')
+  const tabContent = document.querySelectorAll('[data-anima="content"] section')
 
   tabContent[0].classList.add('active') //Ao entrar no site, o conteudo da primeira imagem já vai esta carregado
 
@@ -9,7 +9,8 @@ export default function initTabNav() {
       tabContent.forEach((content) => {
         content.classList.remove('active')
       })
-      tabContent[index].classList.add('active')
+      const animalSelecionado = tabContent[index].dataset.anima
+      tabContent[index].classList.add('active', animalSelecionado)
     }
 
     tabMenu.forEach((itemMenu, index) => {
