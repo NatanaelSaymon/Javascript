@@ -1,11 +1,7 @@
-//Todas as 3 opções selecionam a mesma div
-const div = document.querySelector('div')
-// const div = document.querySelector('[data-color]')
-// const div = document.querySelector('[data-color="azul"]')
+import initScrollAnimation from './modules/animacao-scroll.js'
+import initTabNav from './modules/tabnav.js'
+import initAccordionList from './modules/accordion.js'
 
-div.dataset.height = 1000 //inserindo nova propriedade
-
-console.log(div.dataset)
-console.log(div.dataset.color)
-
-
+initScrollAnimation()
+initTabNav()
+initAccordionList()
