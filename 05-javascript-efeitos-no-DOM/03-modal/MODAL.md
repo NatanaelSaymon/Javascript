@@ -1,3 +1,27 @@
+# CRIAÇÃO DE UM MODAL
+
+Geralmente é criado primeiramente o **html** do modal, esse html é criado logo após a tag footer.
+
+## HMTL
+````html
+    <!-- MODAL INICIO -->
+    <section class="modal-container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" for="email" id="email">
+          <label for="senhamail">Senha</label>
+          <input type="password" for="senha" id="senha">
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+    <!-- MODAL FIM -->
+````
+
+## CSS
+````css
 .modal-container{
   height: 100vh;
   width: 100%;
@@ -7,7 +31,7 @@
   left: 0;
   z-index: 2000;
   
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -59,7 +83,10 @@
   font-weight: bold;
   cursor: pointer;
 }
+````
+## ADICIONANDO A ANIMAÇÃO
 
+````css
 .modal-container.active{
   display: flex;
 }
@@ -79,3 +106,8 @@
     transform: translate3d(0, 0, 0);
   }
 }
+````
+
+````js
+
+````
