@@ -84,7 +84,7 @@ Geralmente é criado primeiramente o **html** do modal, esse html é criado logo
   cursor: pointer;
 }
 ````
-## ADICIONANDO A ANIMAÇÃO
+## ADICIONANDO A ANIMAÇÃO NO CSS
 
 ````css
 .modal-container.active{
@@ -108,6 +108,37 @@ Geralmente é criado primeiramente o **html** do modal, esse html é criado logo
 }
 ````
 
-````js
+## SCRIPT DO MODAL
 
+````js
+export default function initModal(){
+  const btnAbrir = document.querySelector('[data-modal="abrir"]')
+  const btnFechar = document.querySelector('[data-modal="fechar"]')
+  const containerModal = document.querySelector('[data-modal="modal-container"]')
+
+  if(btnAbrir && btnFechar && containerModal){
+    function abrirModal(event){
+      event.preventDefault()
+      containerModal.classList.add('active')
+    }
+
+    function fecharModal(event){
+      event.preventDefault()
+      containerModal.classList.remove('active')
+    }
+
+    function clicForaModal(event){
+      if(event.target == this){ //this = containerModal
+        fecharModal(event)
+      }
+      
+    }
+
+    btnAbrir.addEventListener('click', abrirModal)
+    btnFechar.addEventListener('click', fecharModal)
+    containerModal.addEventListener('click', clicForaModal)
+  }
+}
 ````
+
+*A function clicForaModal() ela só vai ser executada quando o usuario clicar fora do modal, clicou fora do modal, o modal vai se fechar. Porém quando o usuario clicar dentro do modal, o modal não se fechará. Neste caso, como sabemos que o usuario clicou fora do modal? Basta usar o **This** quando o usuario clicar fora do modal, vai está clicando na section, ou seja está clicando fora do modal.*
