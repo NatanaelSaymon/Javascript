@@ -1,8 +1,8 @@
 import outsideClick from './outsideclick.js'
 
 export default function initMenuMobile(){
-    let menuButton = document.querySelector('[data-menu="button"]')
-    let menuList = document.querySelectorAll('ul [data-menu="list"]')
+    const menuButton = document.querySelector('[data-menu="button"]')
+    const menuList = document.querySelector('[data-menu="list"]')
 
     function openMenu(){
         menuButton.classList.add('active')
