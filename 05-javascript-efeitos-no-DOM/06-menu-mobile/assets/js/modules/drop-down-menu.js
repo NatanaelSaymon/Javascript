@@ -17,7 +17,7 @@ export default function initDropDownMenu(){
     event.preventDefault() 
     this.classList.add('active')
     outsideClick(this, ['click', 'touchstart'], () => {
-      this.classList.remove(' active')
+      this.classList.remove('active')
     }) 
   }
 }
