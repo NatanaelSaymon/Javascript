@@ -39,16 +39,38 @@ const diasPassados = agora.getTime() / (24 * 60 * 60 * 1000);
 Podemos criar um objeto com uma data no futuro, passando uma string com o valor da data.
 
 ````JS
-const agora = new Date();
-const promocao = new Date('December 24 2018 23:59');
+const agora = new Date()
+    const natal = new Date('Dec 31 2020 23:59')
 
-function converterEmDias(time) {
-  return time / (24 * 60 * 60 * 1000);
-}
+    //transformando milisegundos em dias
+    function transformarDias(tempo){
+        return tempo / (24 * 60 * 60 * 1000)
+    }
 
-const diasAgora = converterEmDias(agora);
-const diasPromocao = converterEmDias(promocao);
+    const diasAgora = transformarDias(agora.getTime())
+    const diasNatal = transformarDias(natal.getTime())
+    const diasRestante = Math.floor(diasNatal - diasAgora)
 
-const faltam = diasPromocao - diasAgora;
+    console.log(diasRestante)
 ````
 <br><br>
+
+## INSERINDO HORA DE ABERTURA NO SITE
+
+Na parte de onde fica as informacoes da empresa, vamos inserir mais uma <li>, essa li vai conter as informacoes como data e hora. Para isso criaremos 2 atributos **data: data-semana e data-horario**.
+
+**data-semana="1,2,3,4,5"**: os numeros significam os dias da semana, sendo que 0 eh domingo.
+
+**data-horaio="8,18"**: os numero significam que eh o tempo em que a loja ficara aberta, das 8 as 18h.
+
+````html
+<ul class="dados">
+    <li>contato@gmail.com</li>
+    <li>+55 11 99999-9999</li>
+    <li>Rua Marte, 1320</li>
+    <li>São Paulo, SP</li>
+    <li data-semana="1,2,3,4,5" data-horario="8,18">Seg a Sex das 8 as 18</li>
+</ul>
+````
+
+
