@@ -13,7 +13,7 @@
       <nav class="menu">
         <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
         <ul data-menu="list" id="menu">
-          <li><a href="#animais">animais</a></li>
+          <li><a href="#animais">Animais</a></li>
           <li data-dropdown>
             <a href="sobre.html">Sobre</a>
             <ul class="dropdown-menu">
@@ -32,12 +32,12 @@
       <section class="grid-section animais" data-anima="scroll" id="animais">
         <h1 class="title">Animais Fantásticos</h1>
         <ul class="animais-lista" data-tab="animal">
-          <li><img src="./assets/img/imagem1.jpg" alt="Raposa" /></li>
-          <li><img src="./assets/img/imagem2.jpg" alt="Esquilo" /></li>
-          <li><img src="./assets/img/imagem3.jpg" alt="Urso" /></li>
-          <li><img src="./assets/img/imagem4.jpg" alt="Lobo" /></li>
-          <li><img src="./assets/img/imagem5.jpg" alt="Macaco" /></li>
-          <li><img src="./assets/img/imagem6.jpg" alt="Leão" /></li>
+          <li><img src="./assets/img/imagem1.jpg" alt="Raposa"/></li>
+          <li><img src="./assets/img/imagem2.jpg" alt="Esquilo"/></li>
+          <li><img src="./assets/img/imagem3.jpg" alt="Urso"/></li>
+          <li><img src="./assets/img/imagem4.jpg" alt="Lobo"/></li>
+          <li><img src="./assets/img/imagem5.jpg" alt="Macaco"/></li>
+          <li><img src="./assets/img/imagem6.jpg" alt="Leão"/></li>
         </ul>
 
         <div class="animais-descricao" data-tab="content">
@@ -229,8 +229,34 @@
         </dl>
       </section>
 
+      <section class="grid-section numeros" data-anima="scroll">
+        <h1 class="title">Números</h1>
+        <div class="numeros-grid">
+          <div class="numero-animal">
+            <h3>Leao</h3>
+            <span data-numero>3000</span>
+          </div>
+
+          <div class="numero-animal">
+            <h3>Lobos</h3>
+            <span data-numero>4610</span>
+          </div>
+
+          <div class="numero-animal">
+            <h3>Raposas</h3>
+            <span data-numero>8470</span>
+          </div>
+
+          <div class="numero-animal">
+            <h3>Ursos</h3>
+            <span data-numero>230</span>
+          </div>
+        </div>
+      </section>
+
       <section class="grid-section contato" data-anima="scroll" id="contato">
         <h1 class="title">Contato</h1>
+
         <div class="mapa">
           <img src="./assets/img/mapa.png" alt="Mapa" />
         </div>
@@ -255,8 +281,10 @@
         <form action="">
           <label for="email">Email</label>
           <input type="text" for="email" id="email">
+
           <label for="senhamail">Senha</label>
           <input type="password" for="senha" id="senha">
+
           <button type="submit">Entrar</button>
         </form>
       </div>

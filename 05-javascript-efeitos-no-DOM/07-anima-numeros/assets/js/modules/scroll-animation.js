@@ -9,9 +9,10 @@ export default function initScrollAnimation() {
 
       if (sectionVisible) {
         item.classList.add('active')
-      } else {
-        item.classList.remove('active')
-      }
+      } 
+      // else { caso queira retirar o retirar a section
+      //   item.classList.remove('active')
+      // }
     })
   }
 
