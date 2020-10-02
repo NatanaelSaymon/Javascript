@@ -4,33 +4,45 @@
     box-sizing: border-box;
 }
 
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.contato-form__item {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.contato-form__item-input,
+.contato-form__item-textarea {
+    width: 100%;
+}
+
 label {
     display: block;
+    width: 120px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin-top: .5rem;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
     cursor: pointer;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-input,
-textarea{
+.contato-form__item input,
+.contato-form__item textarea {
     width: 100%;
     padding: .5rem;
     border: 2px solid #000;
     font-size: 1rem;
-    margin-bottom: .5rem;
 }
 
-textarea{
+textarea {
     resize: none;
+    height: 120px;
 }
 
-.invalido{
+.invalido {
     border-color: red;
 }

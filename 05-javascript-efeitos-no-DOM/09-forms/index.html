@@ -7,18 +7,63 @@
 
         <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
-        <form name="contato" id="contato">
-            <label for="nome">Nome*</label>
-            <input type="text" name="nome" id="nome" required>
-            <span class="msgerror"></span>
+        <form name="contato-form" id="contato">
+            <div class="contato-form__item">
+                <div class="contato-form__item-title">
+                    <label for="nome">Nome</label>
+                </div>
 
-            <label for="email">E-mail*</label>
-            <input type="email" name="email" id="email" required>
-            <span class="msgerror"></span>
+                <div class="contato-form__item-input">
+                    <input type="text" name="nome" id="nome" required>
+                    <span class="msgerror"></span>
+                </div>
+            </div>
 
-            <label for="textarea">Mensagem</label>
-            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+            <div class="contato-form__item">
+                <div class="contato-form__item-title">
+                    <label for="email">E-mail</label>
+                </div>
+
+                <div class="contato-form__item-input">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="exemplo@mail.com" 
+                        required>
+                    <span class="msgerror"></span>
+                </div>
+            </div>
+
+            <div class="contato-form__item">
+                <div class="contato-form__item-title">
+                    <label for="textarea">Mensagem</label>
+                </div>
+
+                <div class="contato-form__item-textarea">
+                    <textarea name="textarea" id="textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="contato-form__check">
+                <div class="contato-form__check-item">
+                    PS4 <input type="checkbox" value="ps4" id="ps4">
+                </div>
+
+                <div>
+                    Xbox One <input type="checkbox" value="xbox one" id="xbox-one">
+                </div>
+
+                <div>
+                    PS5 <input type="checkbox" value="ps5" id="ps5">
+                </div>
+
+                <div>
+                    Xbox Series X <input type="checkbox" value="xbox Series X" id="xbox-x"> 
+                </div>
+            </div>
         </form>
     </body>
 
