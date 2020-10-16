@@ -25,12 +25,12 @@ function iniciarTempo(){
         tempo.innerHTML = c++
     }, 100)
 
-    iniciar.setAttribute('disabled', '')//disabled: desabilita o botao
+    iniciar.setAttribute('disabled', '') //disabled: desabilita o botao
 }
 
 function pausarTempo(){
     clearInterval(timer)
-    iniciar.removeAttribute('disabled')//remove o disabled
+    iniciar.removeAttribute('disabled') //remove o disabled
 }
 
 function resetarTempo(){
