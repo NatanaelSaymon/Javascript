@@ -182,7 +182,7 @@ var possuiFaculdade = true;
 console.log(+possuiFaculdade); // 1
 ```
 
-**O - antes de um número torna ele negativo**
+**O - "sinal de menos" antes de um número torna ele negativo**
 
 ---
 
