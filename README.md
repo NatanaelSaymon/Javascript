@@ -810,6 +810,7 @@ console.log(window);
 
 window.innerHeight; // retorna a altura do browser
 ```
+<br><br>
 
 _Ao inspecionar elemento com o Chrome, você está vendo a representação oficial do DOM._
 
@@ -838,6 +839,8 @@ document.body; // Retorna o body
 
 _window é o objeto global, por isso não precisamos chamar ele na frente dos seus métodos e propriedades._
 
+<br><br>
+
 **NODE**
 
 Toda tag html é representada pelo objeto Element e por isso herda os seus métodos e propriedades. Element é um tipo de objeto Node.
@@ -853,6 +856,7 @@ titulo.offsetHeight; // retorna a altura do elemento;
 titulo.addEventListener("click", callback);
 // ativa a função callback ao click no titulo
 ```
+<br><br>
 
 **ID**
 
@@ -866,6 +870,7 @@ const contatoSection = document.getElementById("contato");
 // Retorna null caso não exista
 const naoExiste = document.getElementById("teste");
 ```
+<br><br>
 
 **CLASSE E TAG**
 
@@ -882,6 +887,7 @@ const ul = document.getElementsByTagName("ul");
 // Retorna o primeiro elemento
 console.log(gridSection[0]);
 ```
+<br><br>
 
 **SELETOR GERAL E UNICO**
 
@@ -897,6 +903,7 @@ const primeiroUl = document.querySelector("ul");
 // Busca dentro do Ul apenas
 const navItem = primeiroUl.querySelector("li");
 ```
+<br><br>
 
 **SELETOR GERAL LISTA**
 
@@ -911,6 +918,7 @@ const fotosAnimais = document.querySelectorAll(".animais-lista img");
 // Retorna o segundo elemento
 console.log(gridSection[1]);
 ```
+<br><br>
 
 **HTMLCOLLECTION VS NODELIST**
 
@@ -926,6 +934,7 @@ titulo.classList.add("grid-section");
 console.log(gridSectionHTML); // 4 itens
 console.log(gridSectionNode); // 3 itens
 ```
+<br><br>
 
 **ARRAY-LIKE**
 
@@ -943,6 +952,7 @@ gridSection.forEach(function(gridItem, index, array) {
 ```
 
 _É possível transformar array-like em uma Array real, utilizando o método Array.from(gridSection)_
+<br><br>
 
 ## FOREACH E ARROWFUNCTION
 
@@ -957,6 +967,7 @@ imgs.forEach(function (item) {
   console.log(item);
 });
 ```
+<br><br>
 
 **PARAMETROS DO FOREACH**
 
@@ -972,6 +983,7 @@ imgs.forEach(function(valorAtual, index, array){
 });
 
 ```
+<br><br>
 
 **FOREACH E ARRAY**
 
@@ -986,6 +998,7 @@ titulosArray.forEach(function(item){
 });
 
 ```
+<br><br>
 
 **ARROW FUNCTION**
 
@@ -999,6 +1012,7 @@ imgs.forEach((item) => {
 });
 
 ```
+<br><br>
 
 **ARGUMENTOS E PARENTESES**
 
@@ -1022,6 +1036,7 @@ imgs.forEach(() => {
 });
 
 ```
+<br><br>
 
 **RETURN**
 
@@ -1039,6 +1054,7 @@ imgs.forEach(item => console.log(item));
 ```
 
 _Não é permitido fechar a linha com ;_
+<br><br>
 
 **CLASSLIST**
 
@@ -1056,6 +1072,7 @@ menu.classList.toggle('ativo'); // adiciona/remove a classe
 menu.classList.contains('ativo'); // true ou false
 menu.classList.replace('ativo', 'inativo');
 ```
+<br><br>
 
 **ATTRIBUTE**
 
@@ -1067,6 +1084,7 @@ const animais = document.querySelector(".animais");
 animais.attributes; // retorna todos os atributos
 animais.attributes[0]; // retorna o primeiro atributo
 ```
+<br><br>
 
 **GETATTRIBUTE E SETATTRIBUTE**
 
@@ -1082,6 +1100,7 @@ img.removeAttribute("alt"); // remove o alt
 
 img.hasAttributes(); // true / false se tem algum atributo
 ```
+<br><br>
 
 ## DIMENSÕES E DISTÂNCIA
 
@@ -1096,6 +1115,7 @@ section.clientHeight; // height + padding
 section.offsetHeight; // height + padding + border
 section.scrollHeight; // height total, mesmo dentro de scroll
 ```
+<br><br>
 
 **OFFSETTOP E OFFSETLEFT**
 
@@ -1109,6 +1129,7 @@ section.offsetTop;
 // e o canto esquerdo da página
 section.offsetLeft;
 ```
+<br><br>
 
 **GETBOUNDINGCLIENTRECT()**
 
@@ -1122,6 +1143,7 @@ rect.height; // height do elemento
 rect.width; // width do elemento
 rect.top; // distância entre o topo do elemento e o scroll
 ```
+<br><br>
 
 **WINDOW**
 
@@ -1138,6 +1160,7 @@ if (window.innerWidth < 600) {
   console.log("Tela menor que 600px");
 }
 ```
+<br><br>
 
 **MATCHMEDIA();**
 
@@ -1152,6 +1175,7 @@ if (small.matches) {
   console.log("Tela maior que 600px");
 }
 ```
+<br><br>
 
 ## ADDEVENTLISTENER
 
@@ -1167,6 +1191,7 @@ img.addEventListener("click", function () {
 ```
 
 _Todo (addEventListener) dispara uma função._
+<br><br>
 
 **CALLBACK**
 
@@ -1182,6 +1207,7 @@ img.addEventListener('click', callback); // Correto 🚀
 
 img.addEventListener('click', callback()); // Errado, resultado: undefined
 ```
+<br><br>
 
 **EVENT**
 
@@ -1196,6 +1222,7 @@ function callback(event) {
 
 img.addEventListener("click", callback);
 ```
+<br><br>
 
 **PROPRIEDADES DO EVENT**
 
@@ -1212,6 +1239,7 @@ function executarCallback(event) {
 
 animaisLista.addEventListener("click", executarCallback);
 ```
+<br><br>
 
 **EVENT.PREVENTDEFAULT()**
 
@@ -1227,6 +1255,7 @@ function clickNoLink(event) {
 
 linkExterno.addEventListener("click", clickNoLink);
 ```
+<br><br>
 
 **THIS**
 
@@ -1244,6 +1273,7 @@ img.addEventListener("click", callback);
 ```
 
 _Geralmente igual ao event.currentTarget_
+<br><br>
 
 **DIFERENTES EVENTOS**
 
@@ -1262,6 +1292,7 @@ window.addEventListener("scroll", callback);
 window.addEventListener("resize", callback);
 window.addEventListener("keydown", callback);
 ```
+<br><br>
 
 **KEYBORD**
 
@@ -1276,8 +1307,8 @@ function handleKeyboard(event) {
 }
 
 window.addEventListener('keydown', callback);
-
 ```
+<br><br>
 
 **FOREACH E EVENTOS**
 
@@ -1294,8 +1325,8 @@ function imgSrc(event) {
 imgs.forEach((img) => {
   img.addEventListener('click', imgSrc);
 });
-
 ```
+<br><br>
 
 ## TRANSVERSING E MANIPULAÇÃO
 
@@ -1313,6 +1344,7 @@ menu.innerText; // texto, sem tags
 menu.innerText = "<p>Texto</p>"; // a tag vai como texto
 menu.innerHTML = "<p>Texto</p>"; // a tag é renderizada
 ```
+<br><br>
 
 **TRANSVERSING**
 
@@ -1331,6 +1363,7 @@ lista.children[--lista.children.length]; // último filho
 lista.querySelectorAll("li"); // todas as LI's
 lista.querySelector("li:last-child"); // último filho
 ```
+<br><br>
 
 
 # OBJETOS - CONSTRUCTORS FUNCTIONS
@@ -1355,6 +1388,7 @@ fiat.preco = 3000;
 ```
 
 _carro, fiat e honda apontam para o mesmo objeto._
+<br><br>
 
 ## CONSTRUCTOR FUNCTIONS
 
@@ -1375,6 +1409,7 @@ fiat.preco = 3000;
 ```
 
 _Usar Pascal Case, ou seja, começar com letra maiúscula._
+<br><br>
 
 ## NEW KEYWORD
 
@@ -1402,6 +1437,7 @@ return (honda = {
   preco: 0,
 });
 ```
+<br><br>
 
 ## PARÂMETROS E ARGUMENTOS
 
@@ -1416,6 +1452,7 @@ function Carro(marca, preco) {
 const honda = new Carro("Honda", 4000);
 const fiat = new Carro("Fiat", 3000);
 ```
+<br><br>
 
 ## THIS KEYWORD
 
@@ -1434,6 +1471,7 @@ const honda = new Carro("Honda", 2000);
 ```
 
 _Variáveis dentro da Constructor estão "protegidas"._
+<br><br>
 
 ## EXEMPLO REAL
 
@@ -1454,6 +1492,7 @@ Dom.ativo(); // adiciona ativo ao li
 Dom.seletor = "ul";
 Dom.ativo(); // adiciona ativo ao ul
 ```
+<br><br>
 
 ## CONSTRUCTOR FUNCTION REAL
 
@@ -1476,6 +1515,7 @@ const lastLi = new Dom();
 lastLi.seletor = "li:last-child";
 lastLi.ativo();
 ```
+<br><br>
 
 ## LEMBRE-SE DE USAR PARÂMETROS
 
@@ -1493,6 +1533,7 @@ lista.ativo("ativo");
 const lastLi = new Dom("li:last-child");
 lastLi.ativo("ativo");
 ```
+<br><br>
 
 ---
 
@@ -1505,6 +1546,7 @@ const comida = "Pizza";
 const liquido = new String("Água");
 const ano = new String(2018);
 ```
+<br><br>
 
 ## string.LENGTH
 
@@ -1521,6 +1563,7 @@ comida[0]; // P
 frase[0]; // A
 frase[frase.length - 1]; // a
 ```
+<br><br>
 
 ## string.CHARAT(N)
 
@@ -1533,6 +1576,7 @@ linguagem.charAt(0); // J
 linguagem.charAt(2); // v
 linguagem.charAt(linguagem.length - 1); // t
 ```
+<br><br>
 
 ## string.CONCAT(string2, string3, ...)
 
@@ -1544,6 +1588,7 @@ const linguagem = "JavaScript";
 
 const fraseCompleta = frase.concat(linguagem, "!!");
 ```
+<br><br>
 
 ## string.INCLUDES(SEARCH, POSITION)
 
@@ -1556,6 +1601,7 @@ const listaFrutas = "Melancia, Banana, Laranja";
 listaFrutas.includes(fruta); // true
 fruta.includes(listaFrutas); // false
 ```
+<br><br>
 
 ## string.ENDSWITH(SEARCH) E string.STARTSWITH(SEARCH)
 
@@ -1568,6 +1614,7 @@ fruta.endsWith("nana"); // true
 fruta.startsWith("Ba"); // true
 fruta.startsWith("na"); // false
 ```
+<br><br>
 
 ## string.SLICE(START, END)
 
@@ -1586,6 +1633,7 @@ transacao1.slice(12); // cliente
 transacao1.slice(-4); // ente
 transacao1.slice(3, 6); // ósi
 ```
+<br><br>
 
 ## string.SUBstringING(START, END)
 
@@ -1598,6 +1646,7 @@ linguagem.substring(0, 4); // Java
 linguagem.substring(4); // Script
 linguagem.substring(-3); // JavaScript
 ```
+<br><br>
 
 ## string.INDEXOF(SEARCH) E string.LASTINDEXOF(SEARCH)
 
@@ -1610,6 +1659,7 @@ instrumento.indexOf("r"); // 5
 instrumento.lastIndexOf("r"); // 6
 instrumento.indexOf("ta"); // 3
 ```
+<br><br>
 
 ## string.PADSTART(N, string) E string.PADEND(N, string)
 
@@ -1625,6 +1675,7 @@ listaPrecos.forEach((preco) => {
 listaPrecos[0].padStart(10, "."); // .....R$ 99
 listaPrecos[0].padEnd(10, "."); // R$ 99.....
 ```
+<br><br>
 
 ## string.REPEAT(N)
 
@@ -1635,6 +1686,7 @@ const frase = "Ta";
 
 frase.repeat(5); // TaTaTaTaTa
 ```
+<br><br>
 
 ## string.REPLACE(REGEXP|SUBstring, NEWstring|FUNCTION)
 
@@ -1647,6 +1699,7 @@ listaItens = listaItens.replace(/[ ]+/g, ", ");
 let preco = "R$ 1200,43";
 preco = preco.replace(",", "."); // 'R$ 1200.43'
 ```
+<br><br>
 
 ## string.SPLIT(PADRAO)
 
@@ -1660,6 +1713,7 @@ const htmlText = "<div>O melhor item</div><div>A melhor lista</div>";
 const htmlArray = htmlText.split("div");
 const htmlNovo = htmlArray.join("section");
 ```
+<br><br>
 
 ## string.TOLOWERCASE() E string.TOUPPERCASE()
 
@@ -1674,6 +1728,7 @@ sexo1.toLowerCase() === "feminino"; // true
 sexo2.toLowerCase() === "feminino"; // true
 sexo3.toLowerCase() === "feminino"; // true
 ```
+<br><br>
 
 ## string.TRIM(), string.TRIMSTART(), string.TRIMEND()
 
@@ -1685,6 +1740,7 @@ valor.trim(); // 'R$ 23.00'
 valor.trimStart(); // 'R$ 23.00   '
 valor.trimEnd(); // '  R$ 23.00'
 ```
+<br><br>
 
 # OBJETOS - NUMBER E MATH
 
@@ -1696,6 +1752,7 @@ valor.trimEnd(); // '  R$ 23.00'
 const ano = 2018;
 const preco = new Number(99);
 ```
+<br><br>
 
 ## NUMBER.ISNAN() E NUMBER.ISINTEGER();
 
@@ -1708,6 +1765,7 @@ Number.isNaN(4 + 5); // false
 Number.isInteger(20); // true
 Number.isInteger(23.6); // false
 ```
+<br><br>
 
 ## NUMBER.PARSEFLOAT() E NUMBER.PARSEINT()
 
@@ -1723,6 +1781,7 @@ parseInt("99.50", 10); // 99
 parseInt(5.43434355555, 10); // 5
 Number.parseInt("100 Reais", 10); // 100
 ```
+<br><br>
 
 ## N.TOFIXED(DECIMAIS)
 
@@ -1738,6 +1797,7 @@ carro.toFixed(2); // 1000.46
 const preco2 = 1499.49;
 preco2.toFixed(); // 1499
 ```
+<br><br>
 
 ## N.TOLOCALESTRING(LANG, OPTIONS);
 
@@ -1748,6 +1808,7 @@ const preco = 59.49;
 preco.toLocaleString("en-US", { style: "currency", currency: "USD" }); // $59.49
 preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); // R$ 59,49
 ```
+<br><br>
 
 ## MATH
 
@@ -1772,6 +1833,7 @@ Math.floor(4.3); // 4
 Math.round(4.8334); // 5
 Math.round(4.3); // 4
 ```
+<br><br>
 
 ## MATH.MAX(), MATH.MIN() E MATH.RANDOM();
 
@@ -1789,6 +1851,7 @@ Math.floor(Math.random() * 500); // entre 0 e 500
 Math.floor(Math.random() * (72 - 32 + 1)) + 32;
 Math.floor(Math.random() * (max - min + 1)) + min;
 ```
+<br><br>
 
 # OBJETO - ARRAY
 
@@ -1811,6 +1874,7 @@ const dados = [
 dados[2]("Ford");
 dados[1][2].cor; // azul
 ```
+<br><br>
 
 ## CONSTRUÇÃO DE ARRAYS
 
@@ -1827,6 +1891,7 @@ carros.length; // 11
 ```
 
 _Os valores das array's não são estáticos_
+<br><br>
 
 ## ARRAY.FROM()
 
@@ -1845,6 +1910,7 @@ const carros = {
 
 const carrosArray = Array.from(carros);
 ```
+<br><br>
 
 ## ARRAY.ISARRAY()
 
@@ -1857,6 +1923,7 @@ Array.isArray(li); // false
 li = Array.from(li); // Array
 Array.isArray(li); // true
 ```
+<br><br>
 
 ## ARRAY.OF(), ARRAY() E NEW ARRAY()
 
@@ -1869,6 +1936,7 @@ new Array(5); // [,,,,]
 Array(5); // [,,,,]
 Array(1, 2, 3, 4); // [1,2,3,4]
 ```
+<br><br>
 
 ## PROPRIEDADES E MÉTODOS DO PROTOTYPE
 
@@ -1882,6 +1950,7 @@ frutas[0].length; // 6
 frutas[1].length; // 5
 frutas[2].length; // 2
 ```
+<br><br>
 
 ## MÉTODOS MODIFICADORES [].SORT()
 
@@ -1896,6 +1965,7 @@ const idades = [32, 21, 33, 43, 1, 12, 8];
 idades.sort();
 idades; // [1, 12, 21, 32, 33, 43, 8]
 ```
+<br><br>
 
 ## [].UNSHIFT() E [].PUSH()
 
@@ -1909,6 +1979,7 @@ carros; // ['Honda', 'Kia', 'Ford', 'Fiat', 'VW'];
 carros.push("Ferrari"); // 6
 carros; // ['Honda', 'Kia', 'Ford', 'Fiat', 'VW', 'Ferrari'];
 ```
+<br><br>
 
 ## [].SHIFT() E [].POP()
 
@@ -1922,6 +1993,7 @@ carros; // ['Fiat', 'VW', 'Honda'];
 const ultimoCarro = carros.pop(); // 'Honda'
 carros; // ['Fiat', 'VW'];
 ```
+<br><br>
 
 ## [].REVERSE()
 
@@ -1931,6 +2003,7 @@ carros; // ['Fiat', 'VW'];
 const carros = ["Ford", "Fiat", "VW", "Honda"];
 carros.reverse(); // ['Honda', 'VW', 'Fiat', 'Ford'];
 ```
+<br><br>
 
 ## [].SPLICE()
 
@@ -1944,6 +2017,7 @@ carros; // ['Ford', 'Kia', 'Mustang', 'Fiat', 'VW', 'Honda']
 carros.splice(3, 2, "Ferrari"); // ['Fiat', 'VW']
 carros; // ['Ford', 'Kia', 'Mustang', 'Ferrari', 'Honda']
 ```
+<br><br>
 
 ## [].COPYWITHIN()
 
@@ -1956,6 +2030,7 @@ carros; // ['Ford', 'Kia', 'Mustang', 'Ferrari', 'Honda']
 ["Item1", "Item2", "Item3", "Item4"].copyWithin(-1);
 // ['Item1', 'Item2', 'Item3', 'Item1']
 ```
+<br><br>
 
 ## [].FILL()
 
@@ -1971,6 +2046,7 @@ carros; // ['Ford', 'Kia', 'Mustang', 'Ferrari', 'Honda']
 ["Item1", "Item2", "Item3", "Item4"].fill("Banana", 1, 3);
 // ['Item1', 'Banana', 'Banana', 'Item4']
 ```
+<br><br>
 
 ## MÉTODOS DE ACESSO [].CONCAT()
 
@@ -1985,6 +2061,7 @@ const transportes = transporte1.concat(transporte2);
 const maisTransportes = [].concat(transporte1, transporte2, "Van");
 // ['Barco', 'Aviao', 'Carro', 'Moto', 'Van'];
 ```
+<br><br>
 
 ## [].INCLUDES(), [].INDEXOF() E [].LASTINDEXOF()
 
@@ -1999,6 +2076,7 @@ linguagens.indexOf("python"); // 4
 linguagens.indexOf("js"); // 2
 linguagens.lastIndexOf("js"); // 5
 ```
+<br><br>
 
 ## [].JOIN()
 
@@ -2016,6 +2094,7 @@ htmlString = htmlString.split("h2");
 htmlString = htmlString.join("h1");
 // <h1>Título Principal</h1>
 ```
+<br><br>
 
 ## [].SLICE()
 
@@ -2028,6 +2107,7 @@ linguagens.slice(1, 4); // ['css', 'js', 'php']
 
 const cloneLinguagens = linguagens.slice();
 ```
+<br><br>
 
 # OBJETOS - OBJECT
 
@@ -2047,6 +2127,7 @@ const pessoa = new Object({
 })
 
 ````
+<br><br>
 
 
 ## MÉTODOS DE OBJECT
@@ -2072,6 +2153,7 @@ const honda = Object.create(carro);
 honda.init('Honda').acelerar();
 
 ````
+<br><br>
 
 ## OBJECT.ASSIGN()
 
@@ -2101,6 +2183,7 @@ Object.assign(moto, funcaoAutomovel);
 Object.assign(carro, funcaoAutomovel);
 
 ````
+<br><br>
 
 ## OBJECT.DEFINEPROPERTIES()
 
@@ -2127,6 +2210,7 @@ moto;
 // {rodas: 2}
 
 ````
+<br><br>
 
 ## GET E SET
 
@@ -2150,6 +2234,7 @@ moto.velocidade;
 // Velocidade 200
 
 ````
+<br><br>
 
 ## OBJECT.GETOWNPROPERTYDESCRIPTORS(OBJ)
 
@@ -2166,6 +2251,7 @@ Object.getOwnPropertyDescriptor(window, 'innerHeight');
 // Puxa de uma única propriedade
 
 ````
+<br><br>
 
 ## OBJECT.KEYS(OBJ), OBJECT.VALUES(OBJ) OBJECT.ENTRIES(OBJ)
 
@@ -2187,6 +2273,7 @@ Object.entries(carro);
 // [['marca', 'Ford'], ['ano', 2018]]
 
 ````
+<br><br>
 
 ## OBJECT.GETOWNPROPERTYNAMES(OBJ)
 
@@ -2350,6 +2437,7 @@ function espera(texto) {
 }
 setTimeout(espera, 1000, 'Depois de 1s');
 ````
+<br><br>
 
 **IMEDIATO**
 
@@ -2360,6 +2448,7 @@ setTimeout(() => {
   console.log('Após 0s?');
 });
 ````
+<br><br>
 
 **LOOPS E SETTIMEOUT**
 
@@ -2373,6 +2462,7 @@ for(let i = 0; i < 20; i++) {
 }
 
 ````
+<br><br>
 
 **CORRIGINDO O LOOP**
 
@@ -2385,6 +2475,7 @@ for(let i = 0; i < 20; i++) {
   }, 300 * i);
 }
 ````
+<br><br>
 
 **THIS E WINDOW**
 
@@ -2402,6 +2493,7 @@ function handleClick(event) {
 // Erro pois window.classList não existe
 
 ````
+<br><br>
 
 **ARROW FUNCTION**
 
@@ -2418,6 +2510,7 @@ function handleClick(event) {
   }, 1000)
 }
 ````
+<br><br>
 
 **SETINTERVAL**
 
@@ -2436,6 +2529,7 @@ setInterval(() => {
 }, 1000);
 
 ````
+<br><br>
 
 **CLEARINTERVAL**
 
