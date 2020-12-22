@@ -4,6 +4,8 @@
 
 </div>
 
+<br><br>
+
 ## VARIÁVEIS
 
 Responsáveis por guardar dados na memória. Inicia com a palavra **var, let ou const**
@@ -13,6 +15,7 @@ var nome = "Natan";
 let idade = 28;
 const possuiFaculdade = true;
 ```
+<br><br>
 
 ## VÍRGULA
 
@@ -24,6 +27,7 @@ var nome = 'Natanael',
     possuiFaculdade = true;
 
 ```
+<br><br>
 
 ## VARIÁVEIS SEM VALOR
 
@@ -33,6 +37,7 @@ Pode declarar ela e não atribuir valor inicialmente.
 var precoAplicativo;
 // retorna undefined
 ```
+<br><br>
 
 ## NOME
 
@@ -59,6 +64,7 @@ var $selecionar;
 var _nome;
 var possuiFaculdadeNoExterior;
 ```
+<br><br>
 
 ## MUDAR O VALOR ATRIBUÍDO
 
@@ -77,7 +83,7 @@ possuiFaculdade = false;
 ```
 
 ---
-
+<br><br>
 ## TIPOS DE DADOS
 
 **7 TIPOS DE DADOS**
@@ -94,6 +100,8 @@ let simbolo = Symbol(); // Symbol
 let novoObjeto = {}; // Object
 ```
 
+<br><br>
+
 ## VERIFICANDO O TIPO DE DADO
 
 ```js
@@ -105,6 +113,7 @@ console.log(typeof nome);
 _typeof null retorna object_
 
 ---
+<br><br>
 
 ## Operadores
 
@@ -119,6 +128,8 @@ var modulo = 14 % 5; // 4
 
 _Lembrando que soma + em Strings serve para concatenar_
 
+<br><br>
+
 ## OPERADORES ARITMÉTICOS (STRINGS)
 
 ```js
@@ -130,6 +141,8 @@ var divisao = "Comprei 10" / 2; // NaN (Not a Number)
 
 _É possível verificar se uma variável é NaN ou não com a função isNaN()_
 
+<br><br>
+
 ## NAN = NOT A NUMBER
 
 ```js
@@ -138,6 +151,7 @@ var unidade = "kg";
 var peso = numero + unidade; // '80kg'
 var pesoPorDois = peso / 2; // NaN (Not a Number)
 ```
+<br><br>
 
 ## A ORDEM IMPORTA
 
@@ -152,6 +166,8 @@ var total4 = 10 + 10 * 2 + 20 / 2; // 40
 
 _Parênteses para priorizar uma expressão_
 
+<br><br>
+
 ## OPERADORES ARITMÉTICOS UNÁRIOS
 
 ```js
@@ -163,6 +179,7 @@ var incremento2 = 5;
 console.log(++incremento2); // 6
 console.log(incremento2); // 6
 ```
+<br><br>
 
 ## OPERADORES ARITMÉTICOS UNÁRIOS
 
@@ -196,6 +213,7 @@ Existem dois valores booleanos **false** ou **true**.
 var possuiGraduacao = true;
 var possuiDoutorado = false;
 ```
+<br><br>
 
 **CONDICIONAIS IF E ELSE**
 
@@ -213,6 +231,7 @@ if (possuiGraduacao) {
 ```
 
 O valor dentro dos parênteses sempre será avaliado em false ou true.
+<br><br>
 
 **SWITCH**
 
@@ -235,6 +254,7 @@ switch (corFavorita) {
     console.log('Fortnite');
 }
 ```
+<br><br>
 
 **OPERADOR LÓGICO DE NEGAÇÃO !**
 
@@ -261,6 +281,7 @@ Vão sempre retornar um valor booleano
 10 <= 10; // true
 10 >= 11; // false
 ```
+<br><br>
 
 **OPERADORES DE COMPARAÇÃO**
 
@@ -291,6 +312,7 @@ areaQuadrado(4); // 16
 areaQuadrado(5); // 25
 areaQuadrado(2); // 4
 ```
+<br><br>
 
 **PARÂMETROS E ARGUMENTO**
 
@@ -308,6 +330,7 @@ function imc(peso, altura) {
 console.log(imc(80, 1.8)); // 80 e 1.80 são os argumentos
 console.log(imc(60, 1.7)); // 60 e 1.70 são os argumentos
 ```
+<br><br>
 
 **PARENTESES EXECUTA A FUNÇÃO**
 
@@ -325,6 +348,7 @@ corFavorita(); // retorna 'Você não gosta de nada'
 ```
 
 _Se apenas definirmos a função com o function e não executarmos a mesma, nada que estiver dentro dela irá acontecer_
+<br><br>
 
 **ARGUMENTOS PODEM SER FUNÇÕES**
 
@@ -340,6 +364,7 @@ addEventListener("click", function () {
 ```
 
 Funções anônimas são aquelas em que o nome da função não é definido, escritas como **function() {}** ou **() => {}**
+<br><br>
 
 **ESCOPO**
 
@@ -352,6 +377,8 @@ function precisoVisitar(paisesVisitados) {
 }
 console.log(totalPaises); // erro, totalPaises não definido
 ```
+<br><br>
+
 
 ## OBEJTOS
 
@@ -370,6 +397,8 @@ pessoa.possuiFaculdade; // true
 ```
 
 _Propriedades e métodos consistem em nome (chave) e valor_
+<br><br>
+
 
 **MÉTODOS**
 
@@ -421,6 +450,7 @@ toLowerCase(): é um metodo.
 length: é uma propriedade.
 */
 ```
+<br><br>
 
 **DOT NOTATION GET**
 
@@ -448,6 +478,7 @@ var menu = {
 menu.backgroundColor = "#000";
 console.log(menu.backgroundColor); // '#000'
 ```
+<br><br>
 
 **ADICIONAR PROPRIEDADES E MÉTODOS**
 
@@ -461,6 +492,7 @@ var menu = {
 menu.height = 50;
 menu.position = "fixed";
 ```
+<br><br>
 
 **PALAVRA-CHAVE THIS**
 
@@ -479,6 +511,7 @@ var menu = {
 menu.metadeHeight(); // 25
 // sem o this, seria 60
 ```
+<br><br>
 
 ## OPERADORES DE ATRIBUIÇÃO
 
@@ -494,6 +527,7 @@ x /= y; // x = x / y (0.5)
 x %= y; // x = x % y (0)
 x **= y; // x = x ** y (9765625)
 ```
+<br><br>
 
 ## ARRAY
 
@@ -507,6 +541,7 @@ videoGames[2]; // Xbox
 ```
 
 _Acesse um elemento do array utilizando o []_
+<br><br>
 
 **METODOS E PROPRIEDADE DE UM ARRAY**
 
@@ -519,6 +554,7 @@ videoGames.length; // 3
 ```
 
 _Existem diversos outros métodos, como map, reduce, forEach e mais que veremos mais à frente_
+<br><br>
 
 **FOR LOOP**
 
@@ -532,6 +568,7 @@ for (let n = 0; n < 10; n++) {
 ```
 
 _O for loop possui 3 partes, início, condição e incremento_
+<br><br>
 
 **ARRAYS E LOOP**
 
@@ -541,6 +578,7 @@ for (var i = 0; i < videoGames.length; i++) {
   console.log(videoGames[i]);
 }
 ```
+<br><br>
 
 **BREAK**
 
@@ -555,6 +593,7 @@ for (var i = 0; i < videoGames.length; i++) {
   }
 }
 ```
+<br><br>
 
 **FOREACH**
 
@@ -570,6 +609,7 @@ videoGames.forEach(function (item) {
 ```
 
 _Podemos passar os seguintes parâmetros **item**, **index** e **array** ._
+<br><br>
 
 ## Operador Ternario
 
@@ -584,6 +624,7 @@ console.log(podeBeber); // Pode beber
 ```
 
 _Geralmente utilizado quando precisamos atribuir um valor para uma variável, dependendo de uma condição_
+<br><br>
 
 ## ESCOPO
 
@@ -602,6 +643,7 @@ console.log(carro); // Erro, carro is not defined
 ```
 
 _Escopo evita o conflito entre nomes._
+<br><br>
 
 **VARIÁVEL GLOBAL (ERRO)**
 
@@ -616,6 +658,7 @@ function mostrarCarro() {
 mostrarCarro(); // Fusca
 console.log(carro); // Fusca
 ```
+<br><br>
 
 **ESCOPO DE FUNÇÃO (PAI)**
 
@@ -632,6 +675,7 @@ function mostrarCarro() {
 mostrarCarro(); // Meu carro é um Fusca
 console.log(carro); // Fusca
 ```
+<br><br>
 
 **ESCOPO DE BLOCO**
 
@@ -644,6 +688,7 @@ if (true) {
 }
 console.log(carro); // Carro
 ```
+<br><br>
 
 **VAR VAZA O BLOCO**
 
@@ -656,6 +701,7 @@ if (false) {
 }
 console.log(carro); // undefined
 ```
+<br><br>
 
 **CONST E LET NO LUGAR DE VAR**
 
@@ -668,6 +714,7 @@ if (true) {
 }
 console.log(carro); // erro, carro is not defined
 ```
+<br><br>
 
 **{} CRIA UM BLOCO**
 
@@ -681,6 +728,7 @@ Chaves {} criam um escopo de bloco, não confundir com a criação de objetos = 
 console.log(carro); // Carro
 console.log(ano); // erro ano is not defined
 ```
+<br><br>
 
 **FOR LOOP**
 
@@ -692,6 +740,7 @@ for (var i = 0; i < 10; i++) {
 }
 console.log(i); // 10
 ```
+<br><br>
 
 **FOR LOOP COM LET**
 
@@ -703,6 +752,7 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(i); // i is not defined
 ```
+<br><br>
 
 **CONST**
 
@@ -725,6 +775,7 @@ data = 'Janeiro'; // erro
 ```
 
 _Variáveis com valores constantes devem utilizar o const._
+<br><br>
 
 **LET**
 
@@ -738,6 +789,7 @@ console.log(ano); // 2019
 
 let ano = 2020; // erro, redeclarou a variável
 ```
+<br><br><br><br>
 
 
 <p align="center">
@@ -745,6 +797,7 @@ let ano = 2020; // erro, redeclarou a variável
 # JAVASCRIPT - DOM
 
 </p>
+<br><br>
 
 ## DOCUMENT OBJECT MODEL (DOM)
 
